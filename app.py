@@ -15,6 +15,10 @@ def index():
 def load():
     return render_template("upload.html")
 
+@app.route("/alter")
+def alter():
+    return render_template("index.html")
+
 @app.route("/demo")
 def login():
     return render_template("demo.html")

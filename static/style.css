@@ -1,0 +1,233 @@
+
+html,body {
+    color: #333;
+    margin: 0;
+    height: 100%;
+    font-family: "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+}
+
+
+td b{ padding: 0px 8px;}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+form {
+  text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    background: #B4C811;
+    color: #666;
+    font: 12px/150% Arial,Verdana, "microsoft yahei";
+}
+
+html, body, div, dl, dt, dd, ol, ul, li, h1, h2, h3, h4, h5, h6, p, blockquote, pre, button, fieldset, form, input, legend, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #08acee;
+}
+
+button {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+button,input,optgroup,select,textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+}
+
+a:hover {
+    color: #eee;
+}
+
+
+.clearfix{
+    max-width:auto;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+body{
+    background: #FFFFFF url(../images/body.jpg) center center no-repeat;
+    background-size: cover;
+     
+}
+.set-content{
+    height: 100%;
+    width: auto;
+    margin:0 auto;
+}
+
+.set-title {
+    width: auto;
+    height: 56px;
+    display: flex;
+    z-index: 9999;
+     flex-direction: row;
+     overflow: hidden;
+
+}
+
+.set-title ul li{
+    /*list-style:;*/
+    font-size: 25px;
+      color: #000;
+     
+      float:left;
+     /* position: absolute;*/
+      /*position: static;*/
+      box-sizing:border-box;
+      text-align: center;
+      background: #F7F7F7;
+      /*width:100%;*/
+      display:table-cell;
+      cursor:pointer;
+      overflow: hidden;
+      
+    width: 25%;          
+     float: left;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  
+  
+}
+
+@media screen and (max-width: 600px) {
+  .set_title ul li:not(:first-child) {display: none;}
+  .set_title ul li.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .set_title.responsive {position: relative;}
+  .set_title.responsive ul li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .set_title.responsive ul li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+.set-title .icon {
+    display: none;
+}
+.Aleft{  }
+.Aleft span{   }
+.Aspan1{ display: block; padding: 10px 15px; text-align: center; color: #000; font-size: 26px; margin-bottom: 10px;}
+.dleft{ width: auto; float: left;}
+.dright{width: auto; margin-left: 2%; float: left;}
+.Cspan1{ width: auto; text-align: right;float: left; padding-right: 10px; display: block;}
+
+table{ color: #000; text-align: left; width: auto; border-left: 1px solid #ccc;  
+ border-bottom: 1px solid #ccc; font-size: 15px; }
+table th,table td{ padding: 3px;  border-right: 1px solid #ccc;border-top: 1px solid #ccc; }
+
+ 
+
+.wbk{ height: 32px; border: 1px solid #333; margin-top: 15px; width: auto; text-align: center;  }
+
+.sming{ padding: 5px; border:1px dashed #bbb; }
+
+.B2 img{ float: left; margin: 8px 0px; }  
+
+.set-title ul .on{
+    background: #B4C811;
+}
+
+.b3{ color: #000; text-align: center;}
+  select{ width: auto; border: 1px solid #000; color: #000;}
+.set-middle{
+    background: rgba(255,255,255,0.9);
+    
+    
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 15px 17px 25px 19px;
+}
+
+.set-middle-item{
+ font-size: 20px;
+ line-height: 30px;
+ 
+}
+
+.set-middle-image img{
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+
+
+
+.set-ali{
+    flex: 1;
+}
+.set-java{
+    flex: 1.8;
+}
+
+.set-salary{
+    flex: 1;
+}
+
+.set-more{
+    text-align: right;
+    flex: 1;
+}
+
+.set-more:after {
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: auto;
+    border-right: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 0;
+    margin-left: 2px;
+}

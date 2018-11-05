@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		
+		<title>CLAAS TOOL</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link href="../static/style.css" rel="stylesheet" type="text/css" />
+		<script src="../static/js/jquery.js"></script>
+		<script src="../static/js/jquery.SuperSlide.2.1.1.js"></script>
+
+  		<!-- Add to home screen for Safari on iOS -->
+  		<meta name="apple-mobile-web-app-capable" content="yes">
+  		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  		<meta name="apple-mobile-web-app-title" content="CLAAS TOOL">
+  		<link rel="apple-touch-icon" href="images/icons/claas.png">
+  		<meta name="msapplication-TileImage" content="images/icons/claas.png">
+  		<meta name="msapplication-TileColor" content="#2F3BA2">
+
+	</head>
+
+	<body>
+		<div class="container">
+
+		<div class="set-content">
+			<div style="height: 90px; text-align: left; line-height: 90px;">
+				<img src="../static/claas-logo-large-data.jpg" alt = "claas" width=210 height =45px>
+			</div>
+
+			<div class="set-title hd" id="myTopnav">
+				
+				<ul class="clearfix"> <!-- define unordered list -->
+					<li class="on">Import Data</li>
+					<li>Crop Information</li>
+					<li>Input Units</li>
+					<li>Cost</li>
+					<li>Harvester 1</li>
+					<li>Harvester 2</li>
+					<li id="resultk">Results</li>
+
+				</ul>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    				<i class="fa fa-bars"></i>
+  				</a>
+			</div>
+			<div class="set-middle bd">
+				
+				
+				<ul class="set-middle-item">
+
+					<div class="Aleft">
+
+						<span class="Aspan1">Upload Yield File</span>
+
+
+						
+				<div style="clear: both;"></div>
+
+						<span class="Aspan1">Upload Boundary File</span>
+
+
+
+
+
+
+					</div>
+
+				</ul>
+
+				
+				
+				<ul class="set-middle-item">
+
+					<div class="Aleft">
+
+						<span class="Aspan1">Select Crop</span>
+
+							<p class="b3">
+								Select crop type from the drop down below <br /><br />
+							<select id="S1">
+								<option >--please choose-- </option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							
+							</select>
+						<br />
+						
+						<br />
+						<span class="s-3"></span>
+					</p>
+
+
+
+						<span class="Aspan1">Crop Price</span>
+							<p class="b3">
+								Type the crop price below <br />
+								<input type="text" id="crop-price-input" class="wbk" placeholder="" />
+							</p>
+					</div>
+
+				</ul>
+
+				<ul class="set-middle-item">
+					<span class="Aspan1">Choose Input Unit</span>
+						<p class="b3">
+								Please choose the unit <br /><br />
+								<form class = "b3" action="">
+  								<input type="checkbox" name="unit1" value="metric">Metric (meters per second, liters)<br>
+  								<input type="checkbox" name="unit2" value="english">English (miles per hour, bushelsw)<br>
+  
+  								<input type="submit" value="Submit">
+								</form>
+						</p>
+					
+					
+
+				</ul>
+
+				<ul class="set-middle-item">
+					<span class="Aspan1">Cost</span>
+					
+					<p class="b3">
+							
+							<input type="text" id="cost-input" class="wbk" placeholder="$    ">
+							Fuel (dollars per gallon) 
+						
+					</p>
+
+				</ul>
+				<ul class="set-middle-item">
+
+					<span class="Aspan1">Harvest 1</span>
+					<p class="b3">
+						Harvester Model
+						<select id="S2">
+							<option >--please choose-- </option>
+							<option value="1">option 1</option>
+							<option value="2">option 2</option>
+							<option value="3">option 3</option>
+						</select>
+						<br />
+						<br />
+						Header Width
+						<select id="S3">
+							<option >--please choose-- </option>
+							<option value="1">option 1</option>
+							<option value="2">option 2</option>
+							<option value="3">option 3</option>
+						</select>
+						<br />
+						<br />
+						Working Ground Speed:
+						<input type="text" id="wk-gd-speed-ms" class="wbk" placeholder="">m/s 
+						<input type="text" id="wk-gd-speed-mph" class="wbk" placeholder="">mph
+						<br /><br />
+						Turning Speed:
+						<input type="text" id="tn-speed-ms" class="wbk" placeholder="">m/s 
+						<input type="text" id="tn-speed-mph" class="wbk" placeholder="">mph
+						<br /><br />
+						Harvester Bin Capacity:
+						<input type="text" id="hv-bin-cp-l" class="wbk" placeholder="">l 
+						<input type="text" id="hv-bin-cp-bu" class="wbk" placeholder="">bu
+						<br /><br />
+						Harvester Unloading Rate:
+						<input type="text" id="hv-unl-rt-l" class="wbk" placeholder="">l/min
+						<input type="text" id="hv-unl-rt-bu" class="wbk" placeholder="">bu/s
+						<br /><br />
+
+
+					</p>
+
+					
+
+				</ul>
+				<ul class="set-middle-item">
+
+					<span class="Aspan1">Harvest 2</span>
+					<p class="b3">
+						Harvester Model
+						<select id="S4">
+							<option >--please choose-- </option>
+							<option value="1">option 1</option>
+							<option value="2">option 2</option>
+							<option value="3">option 3</option>
+						</select>
+						<br />
+						<br />
+						Header Width
+						<select id="S5">
+							<option >--please choose-- </option>
+							<option value="1">option 1</option>
+							<option value="2">option 2</option>
+							<option value="3">option 3</option>
+						</select>
+						<br />
+						<br />
+						Working Ground Speed:
+						<input type="text" id="wk-gd-speed-ms2" class="wbk" placeholder="">m/s 
+						<input type="text" id="wk-gd-speed-mph2" class="wbk" placeholder="">mph
+						<br /><br />
+						Turning Speed:
+						<input type="text" id="tn-speed-ms2" class="wbk" placeholder="">m/s 
+						<input type="text" id="tn-speed-mph2" class="wbk" placeholder="">mph
+						<br /><br />
+						Harvester Bin Capacity:
+						<input type="text" id="hv-bin-cp-l2" class="wbk" placeholder="">l 
+						<input type="text" id="hv-bin-cp-bu2" class="wbk" placeholder="">bu
+						<br /><br />
+						Harvester Unloading Rate:
+						<input type="text" id="hv-unl-rt-l2" class="wbk" placeholder="">l/min
+						<input type="text" id="hv-unl-rt-bu2" class="wbk" placeholder="">bu/s
+						<br /><br />
+
+
+					</p>
+						
+						
+
+				</ul>
+				
+
+
+			<ul class="set-middle-item">
+
+					<span class="Aspan1">Simulation Results</span>
+					<p class="b3">
+
+					</p>
+
+					
+							
+
+				</ul>
+
+
+
+
+
+				
+
+				
+
+				</div>
+				</div>
+
+				<script src="../static/js/r.js" type="text/javascript" charset="utf-8"></script>
+
+				<script>
+					jQuery(".set-content").slide({
+						autoPlay: false,
+						trigger: "click",
+						delayTime: 700,
+						pnLoop: false
+					});
+
+					function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "set-title hd") {
+        x.className += " responsive";
+    } else {
+        x.className = "set-title hd";
+    }
+}
+				</script>
+			</div>
+
+	</body>
+
+</html>

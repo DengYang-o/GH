@@ -5,7 +5,9 @@
     <title>upload</title>
 </head>
 <body>
-<h1>File uploader<h1>
+			<div style="height: 90px; text-align: left; line-height: 90px;">
+				<img src="../static/claas-logo-large-data.jpg" alt = "claas" width=210 height =45px>
+			</div>
 <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
     <input type="file" name="file" multiple>
     <input type="submit" value="Upload!">
